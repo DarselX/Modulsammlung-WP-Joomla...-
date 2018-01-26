@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainLayer</name>
+    <events>
+        <variable constant="0" name="Online" sid="436649958130483" static="0" type="text"></variable>
+        <variable constant="0" name="Servername" sid="186253068858154" static="0" type="text"></variable>
+        <variable constant="0" name="Version" sid="126076794981256" static="0" type="text"></variable>
+        <variable constant="0" name="Players_Max" sid="761745052252743" static="0" type="text"></variable>
+        <variable constant="0" name="Players" sid="871464006076384" static="0" type="text"></variable>
+        <variable constant="0" name="Port" sid="206226654996757" static="0" type="text"></variable>
+        <variable constant="1" name="APS" sid="996383920778414" static="0" type="number">20</variable>
+        <variable constant="1" name="TOP" sid="597146387015661" static="0" type="number">50</variable>
+        <event-group description="" sid="301201982086927" title="Initialize">
+            <sub-events>
+                <event-block sid="581288257654275">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="129936088955711" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="206867052564957" type="LoadingBarBG">
+                            <param id="0" name="Pin to">Loadingbar_Front</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="572977703470948" type="Players">
+                            <param id="0" name="Pin to">Loadingbar_Front</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="343489960609685" type="Cube">
+                            <param id="0" name="X">LayoutWidth / 2</param>
+                            <param id="1" name="Y">TOP</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="498278965362256" type="Loadingbar_Front">
+                            <param id="0" name="X">LayoutWidth / 2 </param>
+                            <param id="1" name="Y">Cube.Y+APS+(Cube.Height/3)+(9*APS) + 10</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="888717570205694" type="LoadingBarBG">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="714896696302507">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="565065752281636" type="TextBox1">
+                                    <param id="0" name="Unique ID">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="772461497626880" type="TextBox1">
+                                    <param id="0" name="Text">&quot;Servername&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="142141613386193" type="TextBox1">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">Cube.Y + APS + (Cube.Height / 3)</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="688281065198101" type="TextBox1">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="852239278584412">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="382014288718205" type="TextBox1">
+                                    <param id="0" name="Unique ID">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="300078797335973" type="TextBox1">
+                                    <param id="0" name="Text">&quot;NameDesServers&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="678929399790424" type="TextBox1">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">Cube.Y + APS + (Cube.Height / 3) + APS</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="386506005222943" type="TextBox1">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="722526843871470" type="TextBox1">
+                                    <param id="0" name="Size (pt)">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="443691087805164">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="686900506181235" type="TextBox1">
+                                    <param id="0" name="Unique ID">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="632880147174463" type="TextBox1">
+                                    <param id="0" name="Text">&quot;Version des Servers&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="437185036033162" type="TextBox1">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">Cube.Y + APS + (Cube.Height / 3) + APS + 15</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="597073283476919" type="TextBox1">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="207519842927717" type="TextBox1">
+                                    <param id="0" name="Size (pt)">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="618884964902174">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="439364195023075" type="TextBox1">
+                                    <param id="0" name="Unique ID">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="483742444008076" type="TextBox1">
+                                    <param id="0" name="Text">&quot;Adresse&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="532923975569645" type="TextBox1">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">Cube.Y + APS + (Cube.Height / 3) + (3*APS)</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="809135303330930" type="TextBox1">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="709690720851590">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="318156642417375" type="TextBox1">
+                                    <param id="0" name="Unique ID">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="585731309713085" type="TextBox1">
+                                    <param id="0" name="Text">&quot;darselx-gaming.ddnss.de:25565&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="469252999829703" type="TextBox1">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">Cube.Y + APS + (Cube.Height / 3) + (4*APS)</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="198129408475849" type="TextBox1">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="737008561683941" type="TextBox1">
+                                    <param id="0" name="Size (pt)">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="841483097409985">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="992515895581296" type="TextBox1">
+                                    <param id="0" name="Unique ID">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="896428138811565" type="TextBox1">
+                                    <param id="0" name="Text">&quot;Spieler Online&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="954604828942911" type="TextBox1">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">Cube.Y + APS + (Cube.Height / 3) + (6*APS)</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="344524152839132" type="TextBox1">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="593258137860061" type="TextBox1">
+                                    <param id="0" name="Size (pt)">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="904506289833524" title="Run (Abfrage)">
+            <sub-events>
+                <variable constant="0" name="Abfrageergebnis" sid="976492431905521" static="0" type="text"></variable>
+                <event-block sid="493282571129453">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="852474038249943" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="500160106572658" type="System">
+                            <param id="0" name="Variable">Abfrageergebnis</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="697358370733967" type="System">
+                            <param id="0" name="Variable">Online</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="276813976100966" type="System">
+                            <param id="0" name="Variable">Servername</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="577213890764098" type="System">
+                            <param id="0" name="Variable">Version</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="761240172150975" type="System">
+                            <param id="0" name="Variable">Players</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="704008524863682" type="System">
+                            <param id="0" name="Variable">Players_Max</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="862196788063113" type="AJAX">
+                            <param id="0" name="Tag">&quot;Abfrage&quot;</param>
+                            <param id="1" name="URL">&quot;abfrage.php&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="530454395399360">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="926535271731773" type="AJAX">
+                            <param id="0" name="Tag">&quot;Abfrage&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="954629223838655" type="System">
+                            <param id="0" name="Variable">Abfrageergebnis</param>
+                            <param id="1" name="Value">Ajax.LastData</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="600957511672334">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="314093603380902" type="System">
+                                    <param id="0" name="First value">len(Abfrageergebnis)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="648227912889602" type="System">
+                                    <param id="0" name="Variable">Online</param>
+                                    <param id="1" name="Value">tokenat(Abfrageergebnis,0,&quot;;&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="437761641173344" type="System">
+                                    <param id="0" name="Variable">Servername</param>
+                                    <param id="1" name="Value">tokenat(Abfrageergebnis,1,&quot;;&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="201665563725582" type="System">
+                                    <param id="0" name="Variable">Version</param>
+                                    <param id="1" name="Value">tokenat(Abfrageergebnis,2,&quot;;&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="948138384506006" type="System">
+                                    <param id="0" name="Variable">Players</param>
+                                    <param id="1" name="Value">tokenat(Abfrageergebnis,3,&quot;;&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="817255852676520" type="System">
+                                    <param id="0" name="Variable">Players_Max</param>
+                                    <param id="1" name="Value">tokenat(Abfrageergebnis,4,&quot;;&quot;)</param>
+                                </action>
+                                <action id="-42" name="Signal" sid="653992603178647" type="System">
+                                    <param id="0" name="Tag">&quot;ActualizeWidget&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="847200847755700" title="Aktualisierung">
+            <sub-events>
+                <event-block sid="409182173576210">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="372163032617447" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="428597826293007" type="System">
+                            <param id="0" name="Tag">&quot;ActualizeWidget&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="885211848893806">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="267260363166993" type="System">
+                                    <param id="0" name="Variable">Online</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Online&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="184571440070684" type="Cube">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="536039989710817" type="Players">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="780267553615343" type="Offline">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="704087347808397" type="TextBox1">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="999098834893787" type="Loadingbar_Front">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="717222337520687" type="LoadingBarBG">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="353693131788947" type="LoadingBarBG">
+                                    <param id="0" name="Width">211*((int(Players) * int(Players_Max))/100)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="856134455789563" type="Players">
+                                    <param id="0" name="Text">Players &amp; &quot; / &quot; &amp; Players_Max</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="872816037069287">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="578100458845508" type="TextBox1">
+                                            <param id="0" name="Unique ID">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="632961265794131" type="TextBox1">
+                                            <param id="0" name="Text">Servername</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="950458018442395">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="474316298154744" type="TextBox1">
+                                            <param id="0" name="Unique ID">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="616970087024607" type="TextBox1">
+                                            <param id="0" name="Text">&quot;MC-Version: &quot; &amp; Version</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="746512149283016">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="970226744179484" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="279510978803363" type="Cube">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="407402327392042" type="LoadingBarBG">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="186235261944539" type="Players">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="427897769839886" type="Players">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="460926228139681" type="TextBox1">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="563537696276281" type="Loadingbar_Front">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="475760748793545" type="LoadingBarBG">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="663308307158432" type="Offline">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

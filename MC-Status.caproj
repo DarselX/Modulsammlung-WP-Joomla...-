@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>MC-Status</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1o8tueuyeedti</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Scirra" id="setcolor">Set color</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>250</width>
+        <height>300</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Images">
+            <object-type name="Cube" sid="387432614555766">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="836460182886062">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698665197019838" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\haas071\Downloads\cube_red.png">
+                            <collision-poly>
+                                <point x="0.151515" y="0.147059" />
+                                <point x="0.5" y="0.0441176" />
+                                <point x="0.878788" y="0.117647" />
+                                <point x="0.969697" y="0.5" />
+                                <point x="0.833333" y="0.838235" />
+                                <point x="0.5" y="0.955882" />
+                                <point x="0.151515" y="0.852941" />
+                                <point x="0.030303" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\haas071\Downloads\cube_green.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Loadingbar_Front" sid="842170226636718">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="992540894786262">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273703779134972" speed="5">
+                        <frame duration="1" hotspotX="0.502183" hotspotY="1.39394" original-source="C:\Users\haas071\Pictures\Ladebalken_Front.png">
+                            <collision-poly>
+                                <point x="0.0393013" y="0.151515" />
+                                <point x="0.965065" y="0.151515" />
+                                <point x="0.71179" y="0.878788" />
+                                <point x="0.292576" y="0.878788" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LoadingBarBG" sid="848079334389969">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="454446695279712">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="578950380194440">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\haas071\Pictures\Ladebalken_Back.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Texte">
+            <object-type name="TextBox1" sid="419552745941870">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="NoSave" sid="361592920916925">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Players" sid="505833188076265">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="266642211028417">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="NoSave" sid="387600033171898">
+                        <behavior id="NoSave" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Offline" sid="507752240336996">
+                <plugin id="Spritefont2" />
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Systems">
+            <object-type name="AJAX" sid="720356616340182">
+                <plugin id="AJAX" />
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MainLayer.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>MainLayer.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="AJAX" uid="9" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="PHP">
+            <file name="abfrage.php" />
+        </file-folder>
+    </files-folder>
+</c2project>
