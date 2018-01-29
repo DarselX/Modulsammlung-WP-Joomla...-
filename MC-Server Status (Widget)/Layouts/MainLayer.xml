@@ -359,8 +359,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-26.180458069</x>
-                        <y>-42.975952148</y>
+                        <x>-232.040863037</x>
+                        <y>-49.737380981</y>
                         <z>0</z>
                         <width>66</width>
                         <height>68</height>
@@ -517,8 +517,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="Stopwatch" uid="15" />
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>
