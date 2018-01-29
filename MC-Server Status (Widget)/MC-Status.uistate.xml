@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">MainLayer</layout>
-        <event-sheet order="1">MainLayer</event-sheet>
+        <layout order="0">MainLayer</layout>
+        <event-sheet active="1" order="1">MainLayer</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -25,14 +25,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/Images/" />
         <folder expanded="1" path="object-folder/Texte/" />
         <folder expanded="1" path="object-folder/Systems/" />
+        <folder expanded="1" path="object-folder/Buttons/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="file-folder/PHP/" />
+        <folder expanded="1" path="file-folder/CSS/" />
         <folder expanded="1" path="animation-folder/Cube/" />
         <folder expanded="1" path="animation-folder/Loadingbar_Front/" />
+        <folder expanded="1" path="animation-folder/StartingBar_Front/" />
     </folders-expanded>
 </c2uistate>

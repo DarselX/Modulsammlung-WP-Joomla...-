@@ -11,6 +11,8 @@
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Stopwatch" version="0.100000001">Stopwatch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -21,9 +23,12 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="difference">Difference</effect>
         <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
         <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+        <effect author="Brad Larson" id="oilpainting">Oil painting</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
+        <effect author="Brad Larson" id="vignette">Vignette</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -109,6 +114,51 @@
                 </behaviors>
                 <texture original-source="C:\Users\haas071\Pictures\Ladebalken_Back.png" />
             </object-type>
+            <object-type name="StartingBar_Front" sid="944733153625993">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984953045511162" speed="5">
+                        <frame duration="1" hotspotX="0.502183" hotspotY="0.515152" original-source="C:\Users\haas071\Downloads\Loadingbar_Start_Front\Default\000.png">
+                            <collision-poly>
+                                <point x="0.0305677" y="0.212121" />
+                                <point x="0.497817" y="0.121212" />
+                                <point x="0.969432" y="0.212121" />
+                                <point x="0.982533" y="0.484848" />
+                                <point x="0.969432" y="0.787879" />
+                                <point x="0.497817" y="0.848485" />
+                                <point x="0.0305677" y="0.787879" />
+                                <point x="0.0218341" y="0.484848" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="StartingBar_Back" sid="595519914513914">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\haas071\Downloads\Modulsammlung-WP-Joomla...--Patch-01\MC-Server Status (Widget)\Textures\Loadingbar_Start_Back.png" />
+            </object-type>
+            <object-type name="Actualizion" sid="439948512395648">
+                <plugin id="TiledBg" />
+                <effects>
+                    <effect-type name="OilPainting">
+                        <effect id="oilpainting" />
+                    </effect-type>
+                    <effect-type name="Difference">
+                        <effect id="difference" />
+                    </effect-type>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                    <effect-type name="Vignette">
+                        <effect id="vignette" />
+                    </effect-type>
+                </effects>
+                <texture original-source="C:\Users\haas071\Downloads\images.jpg" />
+            </object-type>
+            <object-type name="Actualizion2" sid="418419100775298">
+                <plugin id="TiledBg" />
+                <texture original-source="C:\Users\haas071\Downloads\images.jpg" />
+            </object-type>
         </object-folder>
         <object-folder name="Texte">
             <object-type name="TextBox1" sid="419552745941870">
@@ -145,10 +195,21 @@
                 </effects>
                 <texture />
             </object-type>
+            <object-type name="StartingText" sid="889594592194939">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Systems">
             <object-type name="AJAX" sid="720356616340182">
                 <plugin id="AJAX" />
+            </object-type>
+            <object-type global="1" name="Stopwatch" sid="301893232571572">
+                <plugin id="Rex_Stopwatch" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Buttons">
+            <object-type name="RunServer" sid="634567155277467">
+                <plugin id="Button" />
             </object-type>
         </object-folder>
     </object-folder>
@@ -175,6 +236,11 @@
         </file-folder>
         <file-folder name="PHP">
             <file name="abfrage.php" />
+            <file name="start.php" />
+            <file name="logincheck.php" />
+        </file-folder>
+        <file-folder name="CSS">
+            <file name="style.css" />
         </file-folder>
     </files-folder>
 </c2project>
