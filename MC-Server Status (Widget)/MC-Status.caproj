@@ -15,7 +15,6 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -107,18 +106,6 @@
                 </behaviors>
                 <texture original-source="C:\Users\haas071\Pictures\Ladebalken_Back.png" />
             </object-type>
-            <object-type name="StartingBar_Front" sid="944733153625993">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984953045511162" speed="5">
-                        <frame duration="1" hotspotX="0.502183" hotspotY="0.515152" original-source="C:\Users\haas071\Downloads\Loadingbar_Start_Front\Default\000.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="StartingBar_Back" sid="595519914513914">
-                <plugin id="TiledBg" />
-                <texture original-source="C:\Users\haas071\Downloads\Modulsammlung-WP-Joomla...--Patch-01\MC-Server Status (Widget)\Textures\Loadingbar_Start_Back.png" />
-            </object-type>
             <object-type name="Actualizion" sid="439948512395648">
                 <plugin id="TiledBg" />
                 <effects>
@@ -177,12 +164,6 @@
                 </effects>
                 <texture />
             </object-type>
-            <object-type name="StartingText" sid="889594592194939">
-                <plugin id="Text" />
-            </object-type>
-            <object-type name="PW" sid="882651566670574">
-                <plugin id="TextBox" />
-            </object-type>
         </object-folder>
         <object-folder name="Systems">
             <object-type name="AJAX" sid="720356616340182">
@@ -218,11 +199,7 @@
         </file-folder>
         <file-folder name="PHP">
             <file name="abfrage.php" />
-            <file name="start.php" />
-            <file name="logincheck.php" />
         </file-folder>
-        <file-folder name="CSS">
-            <file name="style.css" />
-        </file-folder>
+        <file-folder name="CSS" />
     </files-folder>
 </c2project>
