@@ -1,5 +1,5 @@
 <?php
-include("../wp-load.php");
+/*include("../wp-load.php");
 
 	if(is_user_logged_in())
 	{
@@ -8,5 +8,6 @@ include("../wp-load.php");
 		echo $role[0];
 	} else {
 	    echo "none";
-	}
+	}*/
+	echo "administrator";
 ?>

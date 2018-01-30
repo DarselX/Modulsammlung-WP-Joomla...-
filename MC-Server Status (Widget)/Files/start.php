@@ -1,17 +1,19 @@
 <?php
-	include("../wp-load.php");
+	$assds="";
+	$assds = isset($_GET['cc']) ? $_GET['cc'] : 'null';
 	
-	if(is_user_logged_in())
+	$check=shell_exec('cc.sh');
+	
+	$check=str_replace("\n","",$check);
+	$assds=str_replace("\n","",$assds);
+		
+	if((string)$check === (string)$assds)
 	{
-	    $user=wp_get_current_user();
-	    $role=(array) $user->roles;
-	} else {
-	    echo "none";
+		shell_exec("sudo mcserver -s");
+		echo "starting";
 	}
-
-	if($role[0]=="administrator")
+	else
 	{
-	    shell_exec("sudo mcserver -s");
-	    echo "starting";
+		echo "none";
 	}
 ?>

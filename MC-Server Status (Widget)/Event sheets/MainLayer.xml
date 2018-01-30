@@ -9,7 +9,7 @@
         <variable constant="0" name="RunningTime" sid="148089821409750" static="0" type="number">0</variable>
         <variable constant="0" name="NowStarting" sid="279023985942783" static="0" type="number">0</variable>
         <variable constant="0" name="CanActualize" sid="772834332310033" static="0" type="number">0</variable>
-        <variable constant="0" name="Online" sid="436649958130483" static="0" type="text"></variable>
+        <variable constant="0" name="Online" sid="436649958130483" static="0" type="text">&quot;Offline&quot;</variable>
         <variable constant="0" name="Servername" sid="186253068858154" static="0" type="text"></variable>
         <variable constant="0" name="Version" sid="126076794981256" static="0" type="text"></variable>
         <variable constant="0" name="Players_Max" sid="761745052252743" static="0" type="text"></variable>
@@ -32,9 +32,6 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="572977703470948" type="Players">
                             <param id="0" name="Pin to">Loadingbar_Front</param>
                             <param id="1" name="Mode">0</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="849191138593326" type="RunServer">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="5" name="Set web font" sid="171581031315555" type="Players">
                             <param id="0" name="Family name">&quot;CSS&quot;</param>
@@ -263,14 +260,14 @@
                             <param id="1" name="Value">ActualizionTime + 1</param>
                         </action>
                         <action id="-5" name="Set width" sid="236322741535747" type="Actualizion">
-                            <param id="0" name="Width">LayoutWidth * (ActualizionTime  / 30)</param>
+                            <param id="0" name="Width">LayoutWidth * (ActualizionTime  / 45)</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="493282571129453">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="852474038249943" type="System">
-                            <param id="0" name="Interval (seconds)">30</param>
+                            <param id="0" name="Interval (seconds)">45</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -428,6 +425,9 @@
                                 <action id="2" name="Set visible" sid="669039929383488" type="RunServer">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="3" name="Set visible" sid="836701125855793" type="PW">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="872816037069287">
@@ -509,6 +509,9 @@
                                 <action id="2" name="Set visible" sid="288761158620377" type="RunServer">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="3" name="Set visible" sid="394867176335673" type="PW">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -548,10 +551,7 @@
                     <actions>
                         <action id="0" name="Request URL" sid="461017885511784" type="AJAX">
                             <param id="0" name="Tag">&quot;Starting&quot;</param>
-                            <param id="1" name="URL">&quot;start.php&quot;</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="508877788026275" type="RunServer">
-                            <param id="0" name="Visibility">0</param>
+                            <param id="1" name="URL">&quot;start.php?cc=&quot; &amp; PW.Text</param>
                         </action>
                     </actions>
                 </event-block>
@@ -587,6 +587,46 @@
                                 <action id="-9" name="Set value" sid="119552783445078" type="System">
                                     <param id="0" name="Variable">NowStarting</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="2" name="Set visible" sid="808362811180526" type="RunServer">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="126647035162458" type="PW">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="402062704229508">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="887831636862449" type="System" />
+                                <condition id="-8" name="Compare two values" sid="909637680913827" type="System">
+                                    <param id="0" name="First value">AJAX.LastData</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;none&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="742660503695684" type="StartingBar_Back">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="144275493926504" type="StartingText">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="326858928167982" type="StartingBar_Front">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="693557644852804" type="StartingBar_Back">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="988403822228959" type="System">
+                                    <param id="0" name="Variable">NowStarting</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="2" name="Set visible" sid="153387013787360" type="RunServer">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="695545606171115" type="PW">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -638,9 +678,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="816709739666589" title="Button Visibility">
+        <event-group description="" disabled="1" sid="816709739666589" title="Button Visibility">
             <sub-events>
-                <event-block sid="541609703428434">
+                <event-block disabled="1" sid="541609703428434">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="690662775131149" type="System">
                             <param id="0" name="Interval (seconds)">3</param>
@@ -658,7 +698,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="701337930606112">
+                <event-block disabled="1" sid="701337930606112">
                     <conditions>
                         <condition id="0" name="On completed" sid="441790131322360" type="AJAX">
                             <param id="0" name="Tag">&quot;CheckIfButtonsVisible&quot;</param>
@@ -666,7 +706,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="447483320762305">
+                        <event-block disabled="1" sid="447483320762305">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="121275071200033" type="System">
                                     <param id="0" name="First value">AJAX.LastData</param>
@@ -680,7 +720,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="142288066148989">
+                        <event-block disabled="1" sid="142288066148989">
                             <conditions>
                                 <condition id="-22" name="Else" sid="667893371219345" type="System" />
                             </conditions>
