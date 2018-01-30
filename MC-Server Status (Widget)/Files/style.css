@@ -10,3 +10,11 @@
 	background: #ff0000;
 	color: #ffe500;
 }
+
+#InputText
+{
+	background:#ba0000;
+	border: 1px solid;
+	border-color:#ff0000;
+	color:#c21515;
+}

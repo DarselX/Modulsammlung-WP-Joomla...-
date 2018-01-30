@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -178,6 +179,9 @@
             </object-type>
             <object-type name="StartingText" sid="889594592194939">
                 <plugin id="Text" />
+            </object-type>
+            <object-type name="PW" sid="882651566670574">
+                <plugin id="TextBox" />
             </object-type>
         </object-folder>
         <object-folder name="Systems">
