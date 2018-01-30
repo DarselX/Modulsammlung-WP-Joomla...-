@@ -33,10 +33,6 @@
                             <param id="0" name="Pin to">Loadingbar_Front</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action id="5" name="Set web font" sid="171581031315555" type="Players">
-                            <param id="0" name="Family name">&quot;CSS&quot;</param>
-                            <param id="1" name="CSS URL">&quot;style.css&quot;</param>
-                        </action>
                         <action id="-3" name="Set position" sid="343489960609685" type="Cube">
                             <param id="0" name="X">LayoutWidth / 2</param>
                             <param id="1" name="Y">TOP</param>
@@ -46,9 +42,6 @@
                             <param id="1" name="Y">Cube.Y+APS+(Cube.Height/3)+(9*APS) + 10</param>
                         </action>
                         <action id="-5" name="Set width" sid="454904924753233" type="LoadingBarBG">
-                            <param id="0" name="Width">0</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="888717570205694" type="StartingBar_Back">
                             <param id="0" name="Width">0</param>
                         </action>
                         <action id="0" name="Set text" sid="225920597574857" type="Players">
@@ -69,17 +62,8 @@
                         <action id="-15" name="Set visible" sid="858179195102452" type="Offline">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="523725042153385" type="StartingBar_Back">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="900373064128318" type="StartingBar_Front">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="5" name="Set frame" sid="782957499761463" type="Cube">
                             <param id="0" name="Frame number">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="582761814780860" type="StartingText">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="934029443756288" type="System">
                             <param id="0" name="Variable">Abfrageergebnis</param>
@@ -260,14 +244,14 @@
                             <param id="1" name="Value">ActualizionTime + 1</param>
                         </action>
                         <action id="-5" name="Set width" sid="236322741535747" type="Actualizion">
-                            <param id="0" name="Width">LayoutWidth * (ActualizionTime  / 45)</param>
+                            <param id="0" name="Width">LayoutWidth * (ActualizionTime  / 20)</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="493282571129453">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="852474038249943" type="System">
-                            <param id="0" name="Interval (seconds)">45</param>
+                            <param id="0" name="Interval (seconds)">20</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -413,19 +397,7 @@
                                 <action id="0" name="Set text" sid="856134455789563" type="Players">
                                     <param id="0" name="Text">Players &amp; &quot; / &quot; &amp; Players_Max</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="445503429649330" type="StartingBar_Back">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="777226634566624" type="StartingBar_Front">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="148170948816652" type="StartingText">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="2" name="Set visible" sid="669039929383488" type="RunServer">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="3" name="Set visible" sid="836701125855793" type="PW">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
@@ -497,19 +469,7 @@
                                 <action id="-15" name="Set visible" sid="663308307158432" type="Offline">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="636188967449380" type="StartingBar_Back">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="475132841545762" type="StartingBar_Front">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="172602772338865" type="StartingText">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="2" name="Set visible" sid="288761158620377" type="RunServer">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="3" name="Set visible" sid="394867176335673" type="PW">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
@@ -534,203 +494,6 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="962471879008960" title="Buttons">
-            <sub-events>
-                <event-block sid="704564616355507">
-                    <conditions>
-                        <condition id="0" name="On clicked" sid="387366902231568" type="RunServer" />
-                        <condition id="-14" name="Compare variable" sid="821071847328258" type="System">
-                            <param id="0" name="Variable">CanActualize</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Request URL" sid="461017885511784" type="AJAX">
-                            <param id="0" name="Tag">&quot;Starting&quot;</param>
-                            <param id="1" name="URL">&quot;start.php?cc=&quot; &amp; PW.Text</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="940468829926404">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="145727661919657" type="AJAX">
-                            <param id="0" name="Tag">&quot;Starting&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="538172305103237">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="233602961942420" type="System">
-                                    <param id="0" name="First value">AJAX.LastData</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;starting&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="602239374725528" type="StartingBar_Back">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="191252417376367" type="StartingText">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="532049362265244" type="StartingBar_Front">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="396492122415844" type="StartingBar_Back">
-                                    <param id="0" name="Width">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="119552783445078" type="System">
-                                    <param id="0" name="Variable">NowStarting</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="2" name="Set visible" sid="808362811180526" type="RunServer">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="3" name="Set visible" sid="126647035162458" type="PW">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="402062704229508">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="887831636862449" type="System" />
-                                <condition id="-8" name="Compare two values" sid="909637680913827" type="System">
-                                    <param id="0" name="First value">AJAX.LastData</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;none&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="742660503695684" type="StartingBar_Back">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="144275493926504" type="StartingText">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="326858928167982" type="StartingBar_Front">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-5" name="Set width" sid="693557644852804" type="StartingBar_Back">
-                                    <param id="0" name="Width">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="988403822228959" type="System">
-                                    <param id="0" name="Variable">NowStarting</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="2" name="Set visible" sid="153387013787360" type="RunServer">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="3" name="Set visible" sid="695545606171115" type="PW">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="192559662543622">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="968029917012056" type="System">
-                            <param id="0" name="Interval (seconds)">1.0</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="853760899489362" type="System">
-                            <param id="0" name="Variable">NowStarting</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="342287585526402" type="System">
-                            <param id="0" name="Variable">RunningTime</param>
-                            <param id="1" name="Value">RunningTime + 1</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="192480588711667" type="StartingBar_Back">
-                            <param id="0" name="Width">220 * (RunningTime   / 270)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="801993106037493" type="StartingText">
-                            <param id="0" name="Text">&quot;Loading: &quot; &amp; round(RunningTime / 270 * 10000) / 100 &amp; &quot; %&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="840933725911225">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="103222885678893" type="System">
-                            <param id="0" name="First value">StartingBar_Back.Width</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">220</param>
-                        </condition>
-                        <condition id="-1" name="Every tick" sid="901850376055630" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="790486916170734" type="System">
-                            <param id="0" name="Variable">NowStarting</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="817999759792647" type="System">
-                            <param id="0" name="Variable">CanActualize</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" disabled="1" sid="816709739666589" title="Button Visibility">
-            <sub-events>
-                <event-block disabled="1" sid="541609703428434">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="690662775131149" type="System">
-                            <param id="0" name="Interval (seconds)">3</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="997286029572783" type="System">
-                            <param id="0" name="First value">CanActualize</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Request URL" sid="880955457066467" type="AJAX">
-                            <param id="0" name="Tag">&quot;CheckIfButtonsVisible&quot;</param>
-                            <param id="1" name="URL">&quot;logincheck.php&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="701337930606112">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="441790131322360" type="AJAX">
-                            <param id="0" name="Tag">&quot;CheckIfButtonsVisible&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="447483320762305">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="121275071200033" type="System">
-                                    <param id="0" name="First value">AJAX.LastData</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;administrator&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="2" name="Set visible" sid="973854997913785" type="RunServer">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="142288066148989">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="667893371219345" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="2" name="Set visible" sid="368403469281042" type="RunServer">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
